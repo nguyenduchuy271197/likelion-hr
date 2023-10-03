@@ -1,6 +1,6 @@
 "use client";
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import { ReactNode, useRef } from "react";
@@ -11,22 +11,22 @@ export default function Carousel({ children }: { children: ReactNode }) {
   const swiperRef = useRef<SwiperType>();
 
   return (
-    <div className="relative max-w-3xl mx-auto">
+    <div className="relative">
       <Swiper
+        slidesPerView={1.1}
+        breakpoints={{
+          896: {
+            slidesPerView: 2.2,
+          },
+        }}
         spaceBetween={30}
         loop={true}
-        speed={1000}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        autoplay={{
-          delay: 4000,
-        }}
-        modules={[Pagination, Navigation, Autoplay]}
+        modules={[Navigation]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
+        className="max-w"
       >
         {children}
       </Swiper>

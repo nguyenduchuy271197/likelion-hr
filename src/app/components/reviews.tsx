@@ -49,25 +49,14 @@ interface Review {
 
 function ReviewCard({ name, avatar, profession, description }: Review) {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="flex flex-col items-center justify-center gap-8">
-        <div className="flex items-center justify-center p-2 bg-white rounded-[30px] shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-          <div className="relative aspect-[1/1] w-28 bg-black overflow-hidden rounded-[30px] bg-gradient-to-r from-rose-400 to-orange-300">
-            <Image
-              src={"" && avatar}
-              fill
-              alt={name}
-              className="object-contain"
-            />
-          </div>
-        </div>
-
-        <div className="space-y-1 text-center sm:space-y-2">
-          <h3 className="text-2xl font-bold capitalize">{name}</h3>
-          <div className="text-lg text-foreground/60">{profession}</div>
+    <div className="max-w-4xl mx-auto bg-muted p-8 rounded-xl">
+      <div className="flex flex-col justify-center gap-4">
+        <div className="space-y-1 border-b pb-4 border-foreground/40">
+          <h3 className="text-xl font-bold capitalize">{name}</h3>
+          <div className="text-foreground/60">{profession}</div>
         </div>
         <div>
-          <p className="text-xl font-medium leading-relaxed text-center">
+          <p className="text-lg font-medium leading-relaxed">
             <span className="text-2xl">“</span>
             {description}
             <span className="text-2xl">”</span>
@@ -83,12 +72,10 @@ export default function Reviews() {
     <section>
       <div className="container">
         <div className="space-y-16">
-          <Title variant="h2">
-            What people <span className="text-gradient">say</span>
-          </Title>
+          <Title variant="h2">Our customers ❤️ PeopleForce</Title>
           <Carousel>
-            {reviews.map((review) => (
-              <SwiperSlide key={review.name}>
+            {reviews.map((review, index) => (
+              <SwiperSlide key={index}>
                 <ReviewCard {...review} />
               </SwiperSlide>
             ))}

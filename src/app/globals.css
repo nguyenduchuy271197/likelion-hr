@@ -82,12 +82,17 @@
   * {
     @apply border-border;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
 
   .text-gradient {
-    @apply bg-clip-text dark:bg-gradient-to-t text-transparent bg-gradient-to-bl from-orange-300 via-indigo-400 to-neutral-800 dark:from-red-500 dark:to-red-300;
+    @apply bg-clip-text dark:bg-gradient-to-b text-transparent dark:from-green-500 dark:to-green-600;
   }
 }
 

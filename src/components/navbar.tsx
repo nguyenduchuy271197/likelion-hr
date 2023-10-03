@@ -1,15 +1,5 @@
 import Link from "next/link";
-import ModeToggle from "./mode-toggle";
-import {
-  HOME_LABEL,
-  HOME_PATH,
-  ABOUT_PATH,
-  ABOUT_LABEL,
-  CONTACT_PATH,
-  CONTACT_LABEL,
-} from "@/constants";
 import { Button } from "./ui/button";
-import { AlignRight } from "lucide-react";
 import Logo from "./logo";
 
 const routes = [
@@ -32,7 +22,7 @@ const routes = [
 
 export default function Navbar() {
   return (
-    <header>
+    <header className="absolute w-full">
       <div className="container">
         <div className="h-[var(--navbar-height)] flex items-center justify-between">
           <Logo />

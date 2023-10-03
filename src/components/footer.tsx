@@ -166,7 +166,7 @@ const socials: Social[] = [
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t">
+    <footer className="border-t">
       <div className="container">
         <div className="pb-8 pt-20">
           <div className="space-y-10 text-foreground/80">

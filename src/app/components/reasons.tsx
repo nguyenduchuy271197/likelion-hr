@@ -1,7 +1,7 @@
 import { Title } from "@/components/ui/title";
 import { Code, LucideIcon } from "lucide-react";
 
-const solutions = [
+const reasons = [
   {
     title: "Lightning fast",
     description:
@@ -40,13 +40,13 @@ const solutions = [
   },
 ];
 
-interface SolutionProps {
+interface ReasonProps {
   title: string;
   description: string;
   icon: LucideIcon;
 }
 
-function SolutionCard({ title, description, icon: Icon }: SolutionProps) {
+function ReasonCard({ title, description, icon: Icon }: ReasonProps) {
   return (
     <div className="p-8 sm:p-12 space-y-4 rounded-lg bg-muted/50">
       <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center">
@@ -58,26 +58,22 @@ function SolutionCard({ title, description, icon: Icon }: SolutionProps) {
   );
 }
 
-export default function Solutions() {
+export default function Reasons() {
   return (
     <section id="solutions">
       <div className="container">
         <div className="space-y-16">
-          <div className="space-y-4 max-w-3xl">
-            <Title variant="h2">
-              Designed with{" "}
-              <span className="text-gradient">every team member</span> in mind
-            </Title>
+          <div className="space-y-4">
+            <Title variant="h2">Why choose PeopleForce?</Title>
             <p className="text-xl text-foreground/70">
-              Thousands of businesses of all sizes – from startups to large
-              enterprises – use PeopleForces software and APIs to accept
-              payments, send payouts, and manage their businesses online.
+              Whether you’re new to PeopleForce, or back to see what’s new,
+              we’ll have you set up and ready to do your best work in minutes.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution) => (
-              <SolutionCard key={solution.title} {...solution} />
+            {reasons.map((solution) => (
+              <ReasonCard key={solution.title} {...solution} />
             ))}
           </div>
         </div>

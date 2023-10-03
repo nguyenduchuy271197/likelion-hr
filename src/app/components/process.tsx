@@ -1,67 +1,53 @@
 import { Title } from "@/components/ui/title";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
-import Image from "next/image";
 
-const steps = [
+interface Step {
+  title: string;
+  description: string;
+  src: string;
+}
+
+const steps: Step[] = [
   {
-    title: "Request for consultation",
+    title: "I work for the ‘company’.",
     description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
+      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
+    src: "",
   },
   {
-    title: "Request for consultation",
+    title: "I work for the ‘company’.",
     description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
+      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
+    src: "",
   },
   {
-    title: "Request for consultation",
+    title: "I work for the ‘company’.",
     description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
+      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
+    src: "",
   },
   {
-    title: "Request for consultation",
+    title: "I work for the ‘company’.",
     description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
-  },
-  {
-    title: "Request for consultation",
-    description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
-  },
-  {
-    title: "Request for consultation",
-    description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
-  },
-  {
-    title: "Request for consultation",
-    description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
-  },
-  {
-    title: "Request for consultation",
-    description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
-  },
-  {
-    title: "Request for consultation",
-    description:
-      "Please enter simple information and a manager will call you within 30 minutes.",
+      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
+    src: "",
   },
 ];
 
 export default function Process() {
   return (
-    <section id="process">
+    <section className="bg-cover bg-center">
       <div className="container">
         <div className="space-y-16">
-          <Title variant="h2">Our Process</Title>
-          <div className="grid lg:grid-cols-[1fr_350px] gap-8">
-            <ul className="flex flex-col gap-4">
+          <Title variant="h2">What we do</Title>
+          <div className="">
+            <ul className="flex flex-col gap-8">
               {steps.map((step, index) => (
                 <li
                   key={index}
-                  className="p-8 flex-col flex sm:flex-row sm:items-center sm:gap-8 border-2 rounded-lg bg-muted/50 gap-2"
+                  className="p-8 flex-col flex sm:flex-row sm:items-center sm:gap-8 border-2 rounded-lg bg-muted/50 gap-2 max-w-4xl"
+                  style={{
+                    marginLeft: `${index * 4}rem`,
+                  }}
                 >
                   <div className="text-red-300/40 text-8xl shrink-0 font-bold">
                     {index + 1}
@@ -75,14 +61,6 @@ export default function Process() {
                 </li>
               ))}
             </ul>
-            <div className="hidden lg:block w-full h-full relative rounded-lg overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1428366890462-dd4baecf492b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2t5c2NyYXBlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-                alt="Process"
-                fill
-                className="object-cover"
-              />
-            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import React from "react";
 
-const titleVariants = cva("text-center capitalize", {
+const titleVariants = cva("capitalize", {
   variants: {
     variant: {
       h1: "text-4xl md:text-5xl font-bold",
