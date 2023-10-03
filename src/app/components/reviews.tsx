@@ -69,7 +69,7 @@ function ReviewCard({ name, avatar, profession, description }: Review) {
 
 export default function Reviews() {
   return (
-    <section>
+    <section id="reviews">
       <div className="container">
         <div className="space-y-16">
           <Title variant="h2">Our customers ❤️ PeopleForce</Title>

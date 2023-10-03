@@ -35,7 +35,7 @@ const steps: Step[] = [
 
 export default function Process() {
   return (
-    <section className="bg-cover bg-center">
+    <section className="bg-cover bg-center" id="process">
       <div className="container">
         <div className="space-y-16">
           <Title variant="h2">What we do</Title>

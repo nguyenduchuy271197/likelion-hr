@@ -8,7 +8,7 @@ import {
 
 export default function FAQ() {
   return (
-    <section>
+    <section id="faq">
       <div className="max-w-lg mx-auto px-8 text-lg">
         <div className="space-y-16">
           <Title variant="h2">

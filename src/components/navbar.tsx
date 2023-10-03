@@ -4,19 +4,24 @@ import Logo from "./logo";
 
 const routes = [
   {
-    id: "solutions",
-    path: "#solutions",
-    label: "Our Solutions",
-  },
-  {
-    id: "about",
-    path: "#about",
-    label: "About Us",
+    id: "reasons",
+    path: "#reasons",
+    label: "Why us?",
   },
   {
     id: "process",
     path: "#process",
     label: "Our Process",
+  },
+  {
+    id: "reviews",
+    path: "#reviews",
+    label: "Reviews",
+  },
+  {
+    id: "faq",
+    path: "#faq",
+    label: "FAQ",
   },
 ];
 

@@ -60,7 +60,7 @@ function ReasonCard({ title, description, icon: Icon }: ReasonProps) {
 
 export default function Reasons() {
   return (
-    <section id="solutions">
+    <section id="reasons">
       <div className="container">
         <div className="space-y-16">
           <div className="space-y-4">
