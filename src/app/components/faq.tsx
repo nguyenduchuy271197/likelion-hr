@@ -9,11 +9,10 @@ import {
 export default function FAQ() {
   return (
     <section>
-      <div className="max-w-md mx-auto px-8">
+      <div className="max-w-lg mx-auto px-8 text-lg">
         <div className="space-y-16">
           <Title variant="h2">
-            Các câu hỏi
-            <span className="text-gradient">thường gặp</span>
+            Các câu hỏi <span className="text-gradient">thường gặp</span>
           </Title>
           <div className="">
             <Accordion type="single" collapsible className="w-full">
@@ -33,7 +32,7 @@ export default function FAQ() {
               <AccordionItem value="item-3">
                 <AccordionTrigger>Is it animated?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. It's animated by default, but you can disable it if you
+                  Yes. Its animated by default, but you can disable it if you
                   prefer.
                 </AccordionContent>
               </AccordionItem>

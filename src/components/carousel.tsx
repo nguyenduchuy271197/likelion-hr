@@ -20,13 +20,11 @@ export default function Carousel({ children }: { children: ReactNode }) {
           },
         }}
         spaceBetween={30}
-        loop={true}
         navigation={true}
         modules={[Navigation]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        className="max-w"
       >
         {children}
       </Swiper>

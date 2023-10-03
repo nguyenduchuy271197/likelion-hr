@@ -6,6 +6,7 @@ import Reviews from "./components/reviews";
 import Solutions from "./components/solutions";
 import Reasons from "./components/reasons";
 import Process from "./components/process";
+import FAQ from "./components/faq";
 
 export default function HomePage() {
   return (
@@ -13,13 +14,14 @@ export default function HomePage() {
       <div>
         <Hero />
         <Networks />
-        <Solutions />
+        <Reasons />
+        {/* <Solutions /> */}
       </div>
       <Process />
-      <CTA />
       <Elementors />
-      <Reasons />
+      <CTA />
       <Reviews />
+      <FAQ />
     </div>
   );
 }
