@@ -32,18 +32,18 @@ export default function Elementors() {
           <div className="space-y-12 text-center lg:text-left">
             <Title
               variant="h2"
-              className="lg:text-left sm:max-w-lg mx-auto lg:mx-0"
+              className="mx-auto lg:text-left sm:max-w-lg lg:mx-0"
             >
               Advance your journey with expertise around the{" "}
               <span className="text-gradient">world</span>
             </Title>
-            <div className="grid sm:grid-cols-2 gap-12 sm:gap-8">
+            <div className="grid gap-12 sm:grid-cols-2 sm:gap-8">
               {elementors.map((elementor) => (
                 <div key={elementor.label} className="space-y-2">
-                  <h4 className="text-4xl sm:text-5xl font-bold">
+                  <h4 className="text-4xl font-bold sm:text-5xl">
                     {elementor.value}
                   </h4>
-                  <p className="text-foreground/80 text-xl">
+                  <p className="text-xl text-foreground/80">
                     {elementor.label}
                   </p>
                 </div>
@@ -53,7 +53,7 @@ export default function Elementors() {
           <div>
             <AspectRatio
               ratio={16 / 9}
-              className="rounded-lg overflow-hidden w-full max-w-2xl mx-auto lg:max-w-none"
+              className="w-full max-w-2xl mx-auto overflow-hidden rounded-lg lg:max-w-none"
             >
               <Image
                 src="https://images.unsplash.com/photo-1664575599618-8f6bd76fc670?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80"

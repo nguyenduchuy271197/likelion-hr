@@ -35,7 +35,7 @@ const steps: Step[] = [
 
 export default function Process() {
   return (
-    <section className="bg-cover bg-center" id="process">
+    <section className="bg-center bg-cover" id="process">
       <div className="container">
         <div className="space-y-16">
           <Title variant="h2">What we do</Title>
@@ -44,17 +44,17 @@ export default function Process() {
               {steps.map((step, index) => (
                 <li
                   key={index}
-                  className="p-8 flex-col flex sm:flex-row sm:items-center sm:gap-8 border-2 rounded-lg bg-muted/50 gap-2 max-w-4xl"
-                  style={{
-                    marginLeft: `${index * 4}rem`,
-                  }}
+                  className="flex flex-col max-w-4xl gap-2 p-8 border-2 rounded-lg sm:flex-row sm:items-center sm:gap-8 bg-muted/50"
+                  // style={{
+                  //   marginLeft: `${index * 4}rem`,
+                  // }}
                 >
-                  <div className="text-red-300/40 text-8xl shrink-0 font-bold">
+                  <div className="font-bold text-red-300/40 text-8xl shrink-0">
                     {index + 1}
                   </div>
                   <div className="flex-1 space-y-2">
                     <h3 className="text-2xl font-bold">{step.title}</h3>
-                    <p className="text-foreground/70 text-lg">
+                    <p className="text-lg text-foreground/70">
                       {step.description}
                     </p>
                   </div>

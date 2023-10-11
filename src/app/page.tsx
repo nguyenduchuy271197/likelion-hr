@@ -15,7 +15,6 @@ export default function HomePage() {
         <Hero />
         <Networks />
         <Reasons />
-        {/* <Solutions /> */}
       </div>
       <Process />
       <Elementors />

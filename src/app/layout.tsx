@@ -8,6 +8,9 @@ import { Quicksand } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ReactQueryProvider from "@/components/react-query-provider";
+
+import { Toaster } from "sonner";
 
 const quicksandFont = Quicksand({
   subsets: ["vietnamese"],
@@ -27,16 +30,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={quicksandFont.className} suppressHydrationWarning={true}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <ReactQueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <Toaster position="top-center" />
+          </ThemeProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   );

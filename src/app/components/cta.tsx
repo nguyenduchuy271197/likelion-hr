@@ -19,8 +19,8 @@ export default function CTA() {
               </p>
             </div>
 
-            <Button size="lg" variant="secondary">
-              <Link href="#">Liên hệ ngay</Link>
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/apply">Liên hệ ngay</Link>
             </Button>
           </div>
           <Image
