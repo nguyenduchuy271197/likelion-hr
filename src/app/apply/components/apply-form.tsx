@@ -98,14 +98,13 @@ export default function ApplyForm() {
 
   const { isLoading: isSending, mutate: mutateSendEmail } = useMutation({
     mutationFn: (data: Email) => axios.post("/api/apply/send-email", data),
-    onSuccess: () => {
+    onMutate: () => {
       form.reset();
       toast.success("Form submitted!");
     },
   });
 
   function onSubmit(data: z.infer<typeof applyFormSchema>) {
-    console.log(data);
     const html = render(
       <ApplyConfirmEmail
         company={data.company}
@@ -135,7 +134,7 @@ export default function ApplyForm() {
             <FormItem>
               <FormLabel>Company</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field} disabled={isSending} />
+                <Input placeholder="" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -148,7 +147,7 @@ export default function ApplyForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field} disabled={isSending} />
+                <Input placeholder="" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -161,7 +160,7 @@ export default function ApplyForm() {
             <FormItem>
               <FormLabel>Position</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field} disabled={isSending} />
+                <Input placeholder="" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -174,7 +173,7 @@ export default function ApplyForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field} disabled={isSending} />
+                <Input placeholder="" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -215,7 +214,6 @@ export default function ApplyForm() {
                                     )
                                   );
                             }}
-                            disabled={isSending}
                           />
                         </FormControl>
                         <FormLabel className="text-sm font-normal">
@@ -265,7 +263,6 @@ export default function ApplyForm() {
                                     )
                                   );
                             }}
-                            disabled={isSending}
                           />
                         </FormControl>
                         <FormLabel className="text-sm font-normal">
@@ -280,12 +277,7 @@ export default function ApplyForm() {
             </FormItem>
           )}
         />
-        <Button
-          type="submit"
-          disabled={isSending}
-          size="lg"
-          className="w-full sm:w-auto"
-        >
+        <Button type="submit" size="lg" className="w-full sm:w-auto">
           {isSending && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
           Submit
         </Button>
