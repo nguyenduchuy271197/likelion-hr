@@ -278,7 +278,6 @@ export default function ApplyForm() {
           )}
         />
         <Button type="submit" size="lg" className="w-full sm:w-auto">
-          {isSending && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
           Submit
         </Button>
       </form>
