@@ -16,12 +16,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Checkbox } from "@/components/ui/checkbox";
-import { sendEmail } from "@/lib/email";
 import ApplyConfirmEmail from "@/emails";
 import { render } from "@react-email/render";
 import { useMutation } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import axios from "axios";
+import { Email } from "@/app/api/apply/send-email/route";
 
 export const SERVICES = [
   {
@@ -96,14 +97,15 @@ export default function ApplyForm() {
   });
 
   const { isLoading: isSending, mutate: mutateSendEmail } = useMutation({
-    mutationFn: sendEmail,
+    mutationFn: (data: Email) => axios.post("/api/apply/send-email", data),
     onSuccess: () => {
       form.reset();
       toast.success("Form submitted!");
     },
   });
 
-  async function onSubmit(data: z.infer<typeof applyFormSchema>) {
+  function onSubmit(data: z.infer<typeof applyFormSchema>) {
+    console.log(data);
     const html = render(
       <ApplyConfirmEmail
         company={data.company}
@@ -117,7 +119,7 @@ export default function ApplyForm() {
 
     mutateSendEmail({
       from: "huynguyen@likelion.net",
-      to: "nguyenduchuy27111997@gmail.com",
+      to: "likelion.vn@likelion.net",
       subject: "New application for HR - LIKELION",
       html: html,
     });
@@ -213,6 +215,7 @@ export default function ApplyForm() {
                                     )
                                   );
                             }}
+                            disabled={isSending}
                           />
                         </FormControl>
                         <FormLabel className="text-sm font-normal">
@@ -262,6 +265,7 @@ export default function ApplyForm() {
                                     )
                                   );
                             }}
+                            disabled={isSending}
                           />
                         </FormControl>
                         <FormLabel className="text-sm font-normal">
