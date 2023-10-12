@@ -3,7 +3,6 @@ import CTA from "./components/cta";
 import Elementors from "./components/elementors";
 import Hero from "./components/hero";
 import Reviews from "./components/reviews";
-import Solutions from "./components/solutions";
 import Reasons from "./components/reasons";
 import Process from "./components/process";
 import FAQ from "./components/faq";

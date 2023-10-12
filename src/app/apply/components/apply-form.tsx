@@ -277,7 +277,7 @@ export default function ApplyForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" size="lg" className="w-full sm:w-auto">
+        <Button type="submit" size="lg" className="w-full">
           Submit
         </Button>
       </form>
