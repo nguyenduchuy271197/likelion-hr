@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import ReactQueryProvider from "@/components/react-query-provider";
 
 import { Toaster } from "sonner";
+import Chat from "@/components/chat";
 
 const quicksandFont = Quicksand({
   subsets: ["vietnamese"],
@@ -41,6 +42,7 @@ export default function RootLayout({
             <main>{children}</main>
             <Footer />
             <Toaster position="top-center" />
+            <Chat />
           </ThemeProvider>
         </ReactQueryProvider>
       </body>
