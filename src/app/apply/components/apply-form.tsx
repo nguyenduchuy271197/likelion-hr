@@ -118,7 +118,7 @@ export default function ApplyForm() {
 
     mutateSendEmail({
       from: "huynguyen@likelion.net",
-      to: "likelion.vn@likelion.net",
+      to: "easylion@likelion.net",
       subject: "New application for HR - LIKELION",
       html: html,
     });
