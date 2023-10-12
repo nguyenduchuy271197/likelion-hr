@@ -15,8 +15,8 @@ export async function POST(request: Request) {
     service: "Gmail",
     secure: true,
     auth: {
-      user: "huynguyen@likelion.net",
-      pass: "ertevinbxjsthvhu",
+      user: process.env.USER_EMAIL,
+      pass: process.env.USER_PASSWORD,
     },
   });
 
